@@ -14,15 +14,20 @@
     <body>
         <h1>Shopping List</h1>
         
-        <p>Hello, ${username} <a href=""> Logout</a></p>
+        <p>Hello, ${username} <a href="login?action=logout">Logout</a></p>
         
         <h3>List</h3>            
         
-        <form>
+        <form action="ShoppingList" method="post">
             Add item: <input type="text" name="item" value="${item}">
             <input type="submit" value="Add">
         </form>
             
-        <div></div>
+        <div>
+            <form action="ShoppingList" method="post">
+             
+                <input type="submit" value="Delete">
+            </form>
+        </div>
     </body>
 </html>
